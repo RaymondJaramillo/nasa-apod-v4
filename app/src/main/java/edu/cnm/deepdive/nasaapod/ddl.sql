@@ -1,0 +1,1 @@
+SELECT a.* FROM Apod AS a INNER JOIN (SELECT apod_id, MAX(timestamp) AS last_accessed FROM Access GROUP BY apod_id) AS mru ON mru.apod_id = a.apod WHERE a.media_type = 0 ORDER BY mru.last_accessed DESC;
