@@ -54,7 +54,6 @@ public class ApodRepository implements SharedPreferences.OnSharedPreferenceChang
   private static final int BUFFER_SIZE = 1 << 14;
 
   private static Application context;
-
   private final ApodDatabase database;
   private final ApodService nasa;
   private final Executor networkPool;
